@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Lumina AI Calendar",
+  "description": "A sophisticated, AI-enhanced calendar application that uses Gemini to parse natural language into schedule events and provides intelligent daily briefings.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
