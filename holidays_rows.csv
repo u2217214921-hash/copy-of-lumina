@@ -1,0 +1,311 @@
+id,date,name
+1,2020-01-01,Capodanno
+2,2020-01-06,Epifania
+3,2020-04-25,Liberazione
+4,2020-05-01,Festa del Lavoro
+5,2020-06-02,Festa della Repubblica
+6,2020-08-15,Ferragosto
+7,2020-11-01,Ognissanti
+8,2020-12-08,Immacolata
+9,2020-12-25,Natale
+10,2020-12-26,Santo Stefano
+11,2021-01-01,Capodanno
+12,2021-01-06,Epifania
+13,2021-04-25,Liberazione
+14,2021-05-01,Festa del Lavoro
+15,2021-06-02,Festa della Repubblica
+16,2021-08-15,Ferragosto
+17,2021-11-01,Ognissanti
+18,2021-12-08,Immacolata
+19,2021-12-25,Natale
+20,2021-12-26,Santo Stefano
+21,2022-01-01,Capodanno
+22,2022-01-06,Epifania
+23,2022-04-25,Liberazione
+24,2022-05-01,Festa del Lavoro
+25,2022-06-02,Festa della Repubblica
+26,2022-08-15,Ferragosto
+27,2022-11-01,Ognissanti
+28,2022-12-08,Immacolata
+29,2022-12-25,Natale
+30,2022-12-26,Santo Stefano
+31,2023-01-01,Capodanno
+32,2023-01-06,Epifania
+33,2023-04-25,Liberazione
+34,2023-05-01,Festa del Lavoro
+35,2023-06-02,Festa della Repubblica
+36,2023-08-15,Ferragosto
+37,2023-11-01,Ognissanti
+38,2023-12-08,Immacolata
+39,2023-12-25,Natale
+40,2023-12-26,Santo Stefano
+41,2024-01-01,Capodanno
+42,2024-01-06,Epifania
+43,2024-04-25,Liberazione
+44,2024-05-01,Festa del Lavoro
+45,2024-06-02,Festa della Repubblica
+46,2024-08-15,Ferragosto
+47,2024-11-01,Ognissanti
+48,2024-12-08,Immacolata
+49,2024-12-25,Natale
+50,2024-12-26,Santo Stefano
+51,2025-01-01,Capodanno
+52,2025-01-06,Epifania
+53,2025-04-25,Liberazione
+54,2025-05-01,Festa del Lavoro
+55,2025-06-02,Festa della Repubblica
+56,2025-08-15,Ferragosto
+57,2025-11-01,Ognissanti
+58,2025-12-08,Immacolata
+59,2025-12-25,Natale
+60,2025-12-26,Santo Stefano
+61,2026-01-01,Capodanno
+62,2026-01-06,Epifania
+63,2026-04-25,Liberazione
+64,2026-05-01,Festa del Lavoro
+65,2026-06-02,Festa della Repubblica
+66,2026-08-15,Ferragosto
+67,2026-11-01,Ognissanti
+68,2026-12-08,Immacolata
+69,2026-12-25,Natale
+70,2026-12-26,Santo Stefano
+71,2027-01-01,Capodanno
+72,2027-01-06,Epifania
+73,2027-04-25,Liberazione
+74,2027-05-01,Festa del Lavoro
+75,2027-06-02,Festa della Repubblica
+76,2027-08-15,Ferragosto
+77,2027-11-01,Ognissanti
+78,2027-12-08,Immacolata
+79,2027-12-25,Natale
+80,2027-12-26,Santo Stefano
+81,2028-01-01,Capodanno
+82,2028-01-06,Epifania
+83,2028-04-25,Liberazione
+84,2028-05-01,Festa del Lavoro
+85,2028-06-02,Festa della Repubblica
+86,2028-08-15,Ferragosto
+87,2028-11-01,Ognissanti
+88,2028-12-08,Immacolata
+89,2028-12-25,Natale
+90,2028-12-26,Santo Stefano
+91,2029-01-01,Capodanno
+92,2029-01-06,Epifania
+93,2029-04-25,Liberazione
+94,2029-05-01,Festa del Lavoro
+95,2029-06-02,Festa della Repubblica
+96,2029-08-15,Ferragosto
+97,2029-11-01,Ognissanti
+98,2029-12-08,Immacolata
+99,2029-12-25,Natale
+100,2029-12-26,Santo Stefano
+101,2030-01-01,Capodanno
+102,2030-01-06,Epifania
+103,2030-04-25,Liberazione
+104,2030-05-01,Festa del Lavoro
+105,2030-06-02,Festa della Repubblica
+106,2030-08-15,Ferragosto
+107,2030-11-01,Ognissanti
+108,2030-12-08,Immacolata
+109,2030-12-25,Natale
+110,2030-12-26,Santo Stefano
+111,2031-01-01,Capodanno
+112,2031-01-06,Epifania
+113,2031-04-25,Liberazione
+114,2031-05-01,Festa del Lavoro
+115,2031-06-02,Festa della Repubblica
+116,2031-08-15,Ferragosto
+117,2031-11-01,Ognissanti
+118,2031-12-08,Immacolata
+119,2031-12-25,Natale
+120,2031-12-26,Santo Stefano
+121,2032-01-01,Capodanno
+122,2032-01-06,Epifania
+123,2032-04-25,Liberazione
+124,2032-05-01,Festa del Lavoro
+125,2032-06-02,Festa della Repubblica
+126,2032-08-15,Ferragosto
+127,2032-11-01,Ognissanti
+128,2032-12-08,Immacolata
+129,2032-12-25,Natale
+130,2032-12-26,Santo Stefano
+131,2033-01-01,Capodanno
+132,2033-01-06,Epifania
+133,2033-04-25,Liberazione
+134,2033-05-01,Festa del Lavoro
+135,2033-06-02,Festa della Repubblica
+136,2033-08-15,Ferragosto
+137,2033-11-01,Ognissanti
+138,2033-12-08,Immacolata
+139,2033-12-25,Natale
+140,2033-12-26,Santo Stefano
+141,2034-01-01,Capodanno
+142,2034-01-06,Epifania
+143,2034-04-25,Liberazione
+144,2034-05-01,Festa del Lavoro
+145,2034-06-02,Festa della Repubblica
+146,2034-08-15,Ferragosto
+147,2034-11-01,Ognissanti
+148,2034-12-08,Immacolata
+149,2034-12-25,Natale
+150,2034-12-26,Santo Stefano
+151,2035-01-01,Capodanno
+152,2035-01-06,Epifania
+153,2035-04-25,Liberazione
+154,2035-05-01,Festa del Lavoro
+155,2035-06-02,Festa della Repubblica
+156,2035-08-15,Ferragosto
+157,2035-11-01,Ognissanti
+158,2035-12-08,Immacolata
+159,2035-12-25,Natale
+160,2035-12-26,Santo Stefano
+161,2036-01-01,Capodanno
+162,2036-01-06,Epifania
+163,2036-04-25,Liberazione
+164,2036-05-01,Festa del Lavoro
+165,2036-06-02,Festa della Repubblica
+166,2036-08-15,Ferragosto
+167,2036-11-01,Ognissanti
+168,2036-12-08,Immacolata
+169,2036-12-25,Natale
+170,2036-12-26,Santo Stefano
+171,2037-01-01,Capodanno
+172,2037-01-06,Epifania
+173,2037-04-25,Liberazione
+174,2037-05-01,Festa del Lavoro
+175,2037-06-02,Festa della Repubblica
+176,2037-08-15,Ferragosto
+177,2037-11-01,Ognissanti
+178,2037-12-08,Immacolata
+179,2037-12-25,Natale
+180,2037-12-26,Santo Stefano
+181,2038-01-01,Capodanno
+182,2038-01-06,Epifania
+183,2038-04-25,Liberazione
+184,2038-05-01,Festa del Lavoro
+185,2038-06-02,Festa della Repubblica
+186,2038-08-15,Ferragosto
+187,2038-11-01,Ognissanti
+188,2038-12-08,Immacolata
+189,2038-12-25,Natale
+190,2038-12-26,Santo Stefano
+191,2039-01-01,Capodanno
+192,2039-01-06,Epifania
+193,2039-04-25,Liberazione
+194,2039-05-01,Festa del Lavoro
+195,2039-06-02,Festa della Repubblica
+196,2039-08-15,Ferragosto
+197,2039-11-01,Ognissanti
+198,2039-12-08,Immacolata
+199,2039-12-25,Natale
+200,2039-12-26,Santo Stefano
+201,2040-01-01,Capodanno
+202,2040-01-06,Epifania
+203,2040-04-25,Liberazione
+204,2040-05-01,Festa del Lavoro
+205,2040-06-02,Festa della Repubblica
+206,2040-08-15,Ferragosto
+207,2040-11-01,Ognissanti
+208,2040-12-08,Immacolata
+209,2040-12-25,Natale
+210,2040-12-26,Santo Stefano
+211,2041-01-01,Capodanno
+212,2041-01-06,Epifania
+213,2041-04-25,Liberazione
+214,2041-05-01,Festa del Lavoro
+215,2041-06-02,Festa della Repubblica
+216,2041-08-15,Ferragosto
+217,2041-11-01,Ognissanti
+218,2041-12-08,Immacolata
+219,2041-12-25,Natale
+220,2041-12-26,Santo Stefano
+221,2042-01-01,Capodanno
+222,2042-01-06,Epifania
+223,2042-04-25,Liberazione
+224,2042-05-01,Festa del Lavoro
+225,2042-06-02,Festa della Repubblica
+226,2042-08-15,Ferragosto
+227,2042-11-01,Ognissanti
+228,2042-12-08,Immacolata
+229,2042-12-25,Natale
+230,2042-12-26,Santo Stefano
+231,2043-01-01,Capodanno
+232,2043-01-06,Epifania
+233,2043-04-25,Liberazione
+234,2043-05-01,Festa del Lavoro
+235,2043-06-02,Festa della Repubblica
+236,2043-08-15,Ferragosto
+237,2043-11-01,Ognissanti
+238,2043-12-08,Immacolata
+239,2043-12-25,Natale
+240,2043-12-26,Santo Stefano
+241,2044-01-01,Capodanno
+242,2044-01-06,Epifania
+243,2044-04-25,Liberazione
+244,2044-05-01,Festa del Lavoro
+245,2044-06-02,Festa della Repubblica
+246,2044-08-15,Ferragosto
+247,2044-11-01,Ognissanti
+248,2044-12-08,Immacolata
+249,2044-12-25,Natale
+250,2044-12-26,Santo Stefano
+251,2045-01-01,Capodanno
+252,2045-01-06,Epifania
+253,2045-04-25,Liberazione
+254,2045-05-01,Festa del Lavoro
+255,2045-06-02,Festa della Repubblica
+256,2045-08-15,Ferragosto
+257,2045-11-01,Ognissanti
+258,2045-12-08,Immacolata
+259,2045-12-25,Natale
+260,2045-12-26,Santo Stefano
+261,2046-01-01,Capodanno
+262,2046-01-06,Epifania
+263,2046-04-25,Liberazione
+264,2046-05-01,Festa del Lavoro
+265,2046-06-02,Festa della Repubblica
+266,2046-08-15,Ferragosto
+267,2046-11-01,Ognissanti
+268,2046-12-08,Immacolata
+269,2046-12-25,Natale
+270,2046-12-26,Santo Stefano
+271,2047-01-01,Capodanno
+272,2047-01-06,Epifania
+273,2047-04-25,Liberazione
+274,2047-05-01,Festa del Lavoro
+275,2047-06-02,Festa della Repubblica
+276,2047-08-15,Ferragosto
+277,2047-11-01,Ognissanti
+278,2047-12-08,Immacolata
+279,2047-12-25,Natale
+280,2047-12-26,Santo Stefano
+281,2048-01-01,Capodanno
+282,2048-01-06,Epifania
+283,2048-04-25,Liberazione
+284,2048-05-01,Festa del Lavoro
+285,2048-06-02,Festa della Repubblica
+286,2048-08-15,Ferragosto
+287,2048-11-01,Ognissanti
+288,2048-12-08,Immacolata
+289,2048-12-25,Natale
+290,2048-12-26,Santo Stefano
+291,2049-01-01,Capodanno
+292,2049-01-06,Epifania
+293,2049-04-25,Liberazione
+294,2049-05-01,Festa del Lavoro
+295,2049-06-02,Festa della Repubblica
+296,2049-08-15,Ferragosto
+297,2049-11-01,Ognissanti
+298,2049-12-08,Immacolata
+299,2049-12-25,Natale
+300,2049-12-26,Santo Stefano
+301,2050-01-01,Capodanno
+302,2050-01-06,Epifania
+303,2050-04-25,Liberazione
+304,2050-05-01,Festa del Lavoro
+305,2050-06-02,Festa della Repubblica
+306,2050-08-15,Ferragosto
+307,2050-11-01,Ognissanti
+308,2050-12-08,Immacolata
+309,2050-12-25,Natale
+310,2050-12-26,Santo Stefano

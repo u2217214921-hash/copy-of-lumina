@@ -3,16 +3,16 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { AIParsedEvent, CalendarEvent } from "../types";
 
 // Initialize the Google GenAI client with the API key from environment variables.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 /**
- * Parses natural language input into a structured event object using Gemini 3 Pro.
- * Uses gemini-3-pro-preview for complex reasoning and data extraction tasks.
+ * Parses natural language input into a structured event object using Gemini 1.5 Pro.
+ * Uses gemini-1.5-pro-preview for complex reasoning and data extraction tasks.
  */
 export const parseNaturalLanguageEvent = async (input: string, referenceDate: string): Promise<AIParsedEvent | null> => {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3-pro-preview",
+      model: "gemini-1.5-pro-preview",
       contents: `Analizza l'input dell'utente per creare un evento. Data di riferimento: ${referenceDate}. 
       Se l'utente cita un codice turno (es. 401, 819, RIP), impostalo come titolo.
       Rispondi esclusivamente in formato JSON.
@@ -54,26 +54,5 @@ export const parseNaturalLanguageEvent = async (input: string, referenceDate: st
   } catch (error) {
     console.error("Gemini Parsing Error:", error);
     return null;
-  }
-};
-
-/**
- * Generates a short text insight for a list of daily events.
- * Uses gemini-3-flash-preview for a basic summarization task.
- */
-export const getDailyInsight = async (events: CalendarEvent[], date: string): Promise<string> => {
-  if (events.length === 0) return "Nessun impegno salvato per oggi.";
-  try {
-    const eventSummaries = events.map(e => `- ${e.title} (${new Date(e.start).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' })})`).join('\n');
-    const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
-      contents: `Commenta brevemente questa agenda per il ${date}:\n${eventSummaries}`,
-    });
-    
-    const text = response.text;
-    return text ? text.trim() : "Buona giornata!";
-  } catch (error) {
-    console.error("Gemini Insight Error:", error);
-    return "Buona giornata!";
   }
 };

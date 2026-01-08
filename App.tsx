@@ -4,10 +4,9 @@ import {
   addMonths, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, 
   addDays, format, differenceInMinutes, addWeeks, startOfISOWeek, endOfISOWeek 
 } from 'date-fns';
-import { it } from 'date-fns/locale/it';
-import { RefreshCcw, X, Clock, Moon, Settings2, Zap, Ticket, Calendar as CalendarIcon, LayoutGrid, List, Thermometer } from 'lucide-react';
+import { RefreshCcw, X, Clock, Moon, Settings2, Zap, Ticket, Thermometer } from 'lucide-react';
 import { CalendarEvent, ShiftConfig } from './types';
-import { supabase } from './lib/supabase';
+import { fetchEvents, fetchShiftConfigs, addEvent, updateEvent, deleteEvent } from './lib/firestore'; // Importa le funzioni di Firestore
 import { formatError } from './lib/utils';
 import { isHoliday } from './lib/holidays';
 
@@ -38,12 +37,12 @@ const App: React.FC = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const { data: evData, error: evError } = await supabase.from('events').select('*').order('start', { ascending: true });
-      if (evError) throw evError;
-      setEvents(evData || []);
-
-      const { data: cfgData, error: cfgError } = await supabase.from('shift_configs').select('*').order('code', { ascending: true });
-      if (!cfgError) setShiftConfigs(cfgData || []);
+      const [eventsData, configsData] = await Promise.all([
+        fetchEvents(),
+        fetchShiftConfigs(),
+      ]);
+      setEvents(eventsData);
+      setShiftConfigs(configsData);
     } catch (err: any) {
       console.error(formatError(err));
     } finally {
@@ -196,8 +195,7 @@ const App: React.FC = () => {
   const handleAddEvent = async (eventData: Partial<CalendarEvent>) => {
     try {
       setIsProcessing(true);
-      const { error } = await supabase.from('events').insert([eventData]);
-      if (error) throw error;
+      await addEvent(eventData);
       await fetchData();
       setIsModalOpen(false);
     } catch (err: any) {
@@ -211,8 +209,7 @@ const App: React.FC = () => {
     try {
       setIsProcessing(true);
       const { id, ...payload } = updatedEvent;
-      const { error } = await supabase.from('events').update(payload).eq('id', id);
-      if (error) throw error;
+      await updateEvent(id, payload);
       await fetchData();
       setIsModalOpen(false);
       setEditingEvent(null);
@@ -227,8 +224,7 @@ const App: React.FC = () => {
     if (!confirm("Eliminare definitivamente?")) return;
     setDeletingId(id);
     try {
-      const { error } = await supabase.from('events').delete().eq('id', id);
-      if (error) throw error;
+      await deleteEvent(id);
       await fetchData();
     } catch (err: any) {
       alert(formatError(err));
@@ -317,7 +313,7 @@ const App: React.FC = () => {
             onClick={() => { setEditingEvent(null); setIsModalOpen(true); }} 
             className="bg-indigo-600 text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-black text-[10px] sm:text-xs flex items-center gap-1.5 shadow-md active:scale-95"
           >
-            <Zap className="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-white" /> <span className="hidden xs:inline">Nuovo</span>
+            <Zap className="w-3 sm:w-3.5 h-3.5 sm:h-3.5 fill-white" /> <span className="hidden xs:inline">Nuovo</span>
           </button>
         </div>
       </footer>

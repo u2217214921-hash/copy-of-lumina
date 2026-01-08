@@ -5,7 +5,7 @@ import { Zap, Loader2, Clock, AlertCircle } from 'lucide-react';
 import { CalendarEvent, ShiftConfig } from '../types';
 import { DEFAULT_SHIFT_MAPPINGS } from '../lib/shiftMappings';
 import { getCategoryColor } from '../lib/utils';
-import { supabase } from '../lib/supabase';
+import { fetchShiftConfigs } from '../lib/firestore'; // Importa la funzione da firestore
 
 interface EventFormProps {
   initialData: Partial<CalendarEvent>;
@@ -28,11 +28,11 @@ export const EventForm: React.FC<EventFormProps> = ({ initialData, onSubmit, isP
   });
 
   useEffect(() => {
-    const fetchConfigs = async () => {
-      const { data } = await supabase.from('shift_configs').select('*');
-      if (data) setDbConfigs(data);
+    const loadConfigs = async () => {
+      const configs = await fetchShiftConfigs();
+      setDbConfigs(configs);
     };
-    fetchConfigs();
+    loadConfigs();
 
     if (initialData.start && initialData.end && initialData.start === initialData.end) {
       setIsSingleTime(true);

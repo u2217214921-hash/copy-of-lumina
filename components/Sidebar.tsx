@@ -1,12 +1,11 @@
 
 import React, { useState } from 'react';
-import { Calendar as CalendarIcon, Cloud, Plus, Sparkles, MessageSquare, RefreshCcw, AlertCircle, Search, User } from 'lucide-react';
+import { Calendar as CalendarIcon, Cloud, Plus, Sparkles, MessageSquare, RefreshCcw, AlertCircle, Search } from 'lucide-react';
 import { CalendarEvent } from '../types';
 
 interface SidebarProps {
   loading: boolean;
   dbError: string | null;
-  dailyInsight: string;
   upcomingEvents: CalendarEvent[];
   onNewEvent: () => void;
   onSmartAdd: () => void;
@@ -15,7 +14,7 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ 
-  loading, dbError, dailyInsight, upcomingEvents, onNewEvent, onSmartAdd, onEventClick, onEmployeeSearch 
+  loading, dbError, upcomingEvents, onNewEvent, onSmartAdd, onEventClick, onEmployeeSearch 
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -83,10 +82,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
           <MessageSquare className="w-4 h-4" /> Briefing AI
         </div>
-        <div className="bg-slate-50 border border-slate-100 p-4 rounded-xl min-h-[100px] flex items-center shadow-inner">
-          <p className="text-sm text-slate-600 italic leading-relaxed">
-            {loading ? 'Caricamento dati...' : (dailyInsight || 'Seleziona un dipendente per vedere i suoi turni.')}
-          </p>
+        <div className="bg-slate-50 border border-slate-100 p-4 rounded-xl min-h-[100px] flex items-center justify-center shadow-inner">
+          {loading ? (
+            <RefreshCcw className="w-6 h-6 text-slate-400 animate-spin" />
+          ) : (
+            <p className="text-sm text-slate-600 italic leading-relaxed">
+              Seleziona un dipendente per vedere i suoi turni.
+            </p>
+          )}
         </div>
       </div>
 

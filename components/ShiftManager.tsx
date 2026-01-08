@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Plus, Trash2, Clock, Zap, Loader2, Save, X } from 'lucide-react';
 import { ShiftConfig } from '../types';
-import { supabase } from '../lib/supabase';
+import { addShiftConfig, deleteShiftConfig } from '../lib/firestore';
 
 interface ShiftManagerProps {
   configs: ShiftConfig[];
@@ -18,8 +18,7 @@ export const ShiftManager: React.FC<ShiftManagerProps> = ({ configs, onUpdate })
     if (!newConfig.code) return;
     setLoading(true);
     try {
-      const { error } = await supabase.from('shift_configs').insert([newConfig]);
-      if (error) throw error;
+      await addShiftConfig(newConfig);
       setNewConfig({ code: '', start_time: '08:00', end_time: '16:00' });
       setIsAdding(false);
       onUpdate();
@@ -34,8 +33,7 @@ export const ShiftManager: React.FC<ShiftManagerProps> = ({ configs, onUpdate })
     if (!confirm("Eliminare questa configurazione?")) return;
     setLoading(true);
     try {
-      const { error } = await supabase.from('shift_configs').delete().eq('id', id);
-      if (error) throw error;
+      await deleteShiftConfig(id);
       onUpdate();
     } finally {
       setLoading(false);
